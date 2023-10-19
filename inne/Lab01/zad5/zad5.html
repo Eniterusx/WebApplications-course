@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <title>Zad 5</title>
+</head>
+<body>
+    <main>
+        <!--
+        <video controls loop src = "../../../../../../../Downloads/[Erai-raws] Mahou Shoujo Madoka Magica - 01 ~ 12 [720p][Multiple Subtitle]/[Erai-raws] Mahou Shoujo Madoka Magica - 01 [720p][Multiple Subtitle].mkv" type="video/mp4"></video>></video> 
+        <br>
+        <button onclick = "videoChanger()"> NEXT </button>
+        -->
+        <video controls loop src = "videos/cat.mp4"></video>
+    </main>
+    <script>
+        let myIndex = 0
+        let videoPrefix = "../../../../../../../Downloads/[Erai-raws] Mahou Shoujo Madoka Magica - 01 ~ 12 [720p][Multiple Subtitle]";
+        let myVideos = [
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 01 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 02 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 03 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 04 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 05 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 06 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 07 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 08 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 09 [720p][Multiple Subtitle].mkv',
+        '[Erai-raws] Mahou Shoujo Madoka Magica - 10 [720p][Multiple Subtitle].mkv',
+        ]
+        let source = videoPrefix + myVideos[myIndex];
+        function videoChanger() {
+        myIndex += 1
+        if (myIndex >= myVideos.length)
+            myIndex = 0
+        source = `${videoPrefix + myVideos[myIndex]}`
+        document.querySelector("video").src = source;
+        }
+        console.log(source)
+    </script>
+</body>
+</html>

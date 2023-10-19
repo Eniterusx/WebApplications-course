@@ -1,0 +1,110 @@
+.red {
+    background-color: lightcoral;
+    color: green;
+    font-style: italic;
+    font-size: small;
+}
+
+.green {
+    background-color: lightgreen;
+    color: blue;
+    font-style: oblique 40deg;
+    font-size: medium;
+    width: 900px;
+    height: 100px;
+}
+
+.blue {
+    background-color: lightblue;
+    color: red;
+    font-weight: bold;
+    font-size: large;
+    width: 750px;
+    height: 20px;
+    overflow: visible;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    font-style: normal;
+    font-size: x-large;
+}
+
+p {
+    margin: 20px;
+    padding: 5px;
+}
+
+table {
+    width: 50vw;    
+}
+.bluetab tr{
+    width: 100px;
+    height: 5vh;
+}
+
+.bluetab tr:first-of-type {
+    background-color: #5b9cd6;
+}
+.bluetab tr:nth-of-type(2){
+    background-color: transparent;
+    height: 0.1vh;
+}
+.bluetab tr:nth-of-type(2n+3) {
+    background-color: #d3def0;
+}
+.bluetab tr:nth-of-type(even) {
+    background-color: #eaeef7;
+}
+
+.graytab {
+    border-collapse: collapse;
+    margin-bottom: 100px;
+}
+
+.graytab tr td {
+    border: 2px solid black;
+}
+
+.graytab tr{
+    width: 60px;
+    height: 5vh;
+    border-color: black;
+}
+
+.graytab tr:first-of-type {
+    background-color: #776f6d;
+}
+
+.graytab tr {
+    background-color: #d9d9d9;  
+}
+
+#first-cat {
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
+
+#second-cat {
+    margin-top: 500px;
+    float: right;
+}
+
+article p {
+    overflow: visible;
+    width: 550px;
+    height: 510px;
+    padding: 25px;
+    text-align: justify;
+}
+
+article {
+    border: 5px outset black;
+    height: 870px;
+    width: 620px;
+    background-color: lightblue;
+    text-align: auto;
+    overflow:hidden;
+}

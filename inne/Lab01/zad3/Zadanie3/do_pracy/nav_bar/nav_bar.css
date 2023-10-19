@@ -1,0 +1,50 @@
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+.h li{
+    float: left;
+    border: 1px dashed grey;
+    list-style-position: inside;
+    background-color: rgb(235, 248, 249);
+    width: 150px;
+}
+.h li.bg{
+    background-color: rgb(245, 252, 254);
+}
+.h li a:link,.h li a:visited{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+
+.v li{
+    border: 1px dashed grey;
+    list-style-position: inside;
+    background-color: rgb(235, 248, 249);
+    width: 150px;
+}
+
+.v li a:link,.v li a:visited{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+}
+
+.v li.home, .h li.home {
+    list-style-image: url('images/home.png');
+  }
+.v li.bg, .h li.bg {
+    list-style-image: url('images/bg_here.png');
+}
+.v li.link, .h li.link {
+    list-style-image: url('images/link.png');
+}
+.v li:hover, .v li:active, .h li:hover, .h li:active{
+    background-color: rgb(33,255,33);
+    list-style-image: url('images/go.png');
+}
+

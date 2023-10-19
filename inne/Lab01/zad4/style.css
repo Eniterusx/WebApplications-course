@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(146, 45, 146);
+}
+main{
+    height: 500px;
+    width: 350px;
+    border:2px solid purple;
+    background-color: plum;
+    margin: auto;
+}
+input{
+    margin-left: 0px;
+    margin-right: auto;
+    width: 340px;
+    background-color: lightgray;
+}
+input#submit{
+    border:none;
+    background-color:darkmagenta;
+    color:gold;
+    height: 36px;
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 75px;
+    margin-right: 75px;
+}

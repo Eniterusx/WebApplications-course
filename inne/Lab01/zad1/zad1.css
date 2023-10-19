@@ -1,0 +1,150 @@
+#text-one{
+    background-color: black;
+    color: white;
+    font-size: 14;
+    font-family: sans-serif;
+    height: 20px;
+    width: 1000px;
+    border: none;
+    margin: 2px;
+    padding: 2px;
+}
+
+#text-two{
+    background-color: green;
+    color: grey;
+    font-size: 15;
+    font-family: 'Times New Roman';
+    height: 20px;
+    width: 1000px;
+    border: 2px;
+    margin: 4px;
+    padding: 3px;
+}
+
+#text-three{
+    background-color: orchid;
+    color:firebrick;
+    font-size: 16;
+    font-family: Impact;
+    height: 20px;
+    width: 1000px;
+    border: 4px;
+    margin: 3px;
+    padding: 5px;
+}
+
+#text-four{
+    background-color: lightgrey;
+    color:darkslategrey;
+    font-size: 17;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 20px;
+    width: 400px;
+    overflow:visible;
+    border: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+#table-one{
+    border: 2px;
+    border-color: wheat;
+    width: 50%;
+    color:black;
+    font-size: 15;
+    text-align: center;
+}
+#table-one th{
+    background-color: rgb(91, 156, 214);
+    color: aliceblue;
+}
+.odd-one{
+    background-color:rgb(211,222,240);
+}
+.even-one{
+    background-color:rgb(234,238,247);
+}
+
+#table-two{
+    border: 3px;
+    border-color: black;
+    width: 50%;
+    color:wheat;
+    font-size: 15;
+    text-align: center;
+}
+#table-two th{
+    background-color: darkslategrey;
+}
+#table-two td{
+    background-color: grey;
+}
+
+td:empty::after, th:empty::after{
+    content: "\00a0";
+    height: 22px;
+    width: 50px;
+}
+
+#taiga{
+    height: 300px;
+    float: left;
+    margin: 5px;
+}
+#illya{
+    height: 300px;
+    float: right;
+    margin: 5px;
+}
+#par_img{
+    overflow: visible;
+    width: 550px;
+    height: 510px;
+    padding: 25px;
+
+}
+.imgDiv {
+  border: 5px outset black;
+  height: 870px;
+  width: 620px;
+  background-color: lightblue;
+  text-align: auto;
+  overflow:hidden;
+}
+#sky1{
+    height: 250px;
+}
+#sky2{
+    height: 250px;
+    position:relative;
+    left: 350px;
+}
+#sky3{
+    height: 250px;
+    position: relative;
+    right: 330px;
+}
+.images{
+    height: 250px;
+    width: 1030px;
+    background-color: lightblue;
+    border: 5px outset black;
+}
+#united-federation{
+    list-style-type: circle;
+    background-color: blue;
+    color:yellow;
+    width: 100px;
+    position: relative;
+    top:150px;
+}
+#china-colonies{
+    list-style-type: square;
+    background-color: red;
+    color:yellow;
+    width: 100px;
+    position:relative;
+    bottom: 125px;
+}
