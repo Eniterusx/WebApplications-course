@@ -1,0 +1,28 @@
+div{
+    background-color: #dfe8ef;
+    border: 2px solid #4f81bd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    height: 75px;
+    width: 150px;
+    margin: 1px;
+    font-size: 20px;
+}
+
+div div:first-of-type{
+    height: calc(100% - 5px);
+}
+
+.box {
+    width: 800px;
+    height: calc(75px*3);
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.selected {
+    align-self: center;
+}

@@ -1,0 +1,208 @@
+.firstp {
+    background-color: brown;
+    background-size: cover;
+    font-family:'Lucida Sans';
+    font-size: 72pt;
+    font-style: italic;
+    color:ghostwhite;
+    padding:0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.secondp {
+    background-color: cadetblue;
+    background-size:contain;
+    font-family: monospace;
+    font-size: 54pt;
+    color:gold;
+    height: 400px;  
+    width: 600px;
+    overflow:auto;
+    padding:0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.thirdp {
+    background-color: crimson;
+    background-size: auto;
+    font-family: cursive;
+    font-size: 27pt;
+    color:hotpink;
+    width:500px;
+    height: 100px;
+    overflow: auto;
+    margin: 0px;
+}
+
+.forthp {
+    background-color:forestgreen;
+    font-family:fantasy;
+    font-size: 12pt;
+    color:mediumorchid;
+    margin-top:20px;
+    margin-left:40%;
+    margin-right:40%;
+    padding-left:10%;
+    padding-right:10%;
+    margin-bottom:100px;
+}
+
+.table1{
+    table-layout: fixed;
+    width:600px;
+    height: 200px;
+    margin-bottom: 100px;
+    text-align:center;
+}
+
+.table1-headers{
+    background-color:#5b9cd6;
+    
+}
+
+.table1-row1{
+    background-color:#d3def0;
+}
+.table1-row2{
+    background-color:#eaeef7;
+}
+
+.table1-lastrow{
+    padding-right: 100%;
+}
+
+
+.table2{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 700px;
+    height:200px;
+    text-align:center;
+}
+
+.table2-headers{
+    background-color:#776f6d;
+}
+
+.table2-row{
+    background-color: #d9d9d9;
+}
+
+.table2-content{
+    border: 2px solid black;
+}
+
+.text-image-floating{
+    width:500px;
+}
+
+.float-img1{
+    float:left;
+}
+
+.float-img2{
+    float:right;
+}
+
+.floating-text{
+    width:25%
+}
+
+#jpg1{
+    position:static;
+}
+
+#jpg2{
+    position:relative;
+    left:90px;
+}
+
+#jpg3{
+    position:relative;
+    right:120px;
+}
+
+#eu-list{
+    background-image: url("euflag.jpg");
+    backgorund-color: blue;
+    width: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    top:110px;
+}
+
+#lpl-list{
+    background-image: url("china.webp");
+    backgorund-color: red;
+    width: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    bottom:140px;
+    
+}
+
+#form-box{
+    width:450px;
+    color:yellow;
+    background-color: darkblue;
+}
+
+#form-title{
+    background-color:orange;
+    color:yellow;
+    font-size:18px;
+    padding:8px;
+    padding-left:12px;
+}
+
+#form-inside{
+    margin:auto;
+}
+#form-inside td{
+    height:32px;
+    text-align:left;
+}
+
+#form-inside .lcol{
+    text-align:right;
+}
+
+#footer-decision{
+    height:50px;
+    background-color: orange;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right:5%;
+}
+
+#box-confirm{
+    background-color:green;
+    height: 35px;
+    width:80px;
+    display: flex;
+    margin-right:8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-cancel{
+    background-color: red;
+    height:35px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-confirm-text{
+    color:white;
+}
+
+#box-cancel-text{
+    color:white;
+}

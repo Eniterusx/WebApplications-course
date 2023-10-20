@@ -1,0 +1,30 @@
+body{ 
+    display: flex;
+    align-content: center;
+}
+
+section{
+    margin: 10px auto;
+    display: flex;
+    align-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+div {
+    height: 50px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.red {
+    background-color: #fe0000;
+    width: 15vw;
+}
+.blue {
+    background-color: #acd8e5;
+    width: 75vw;
+}
+.yellow {
+    background-color: #ffff00;
+    width: calc(90vw + 20px + 2px);
+}

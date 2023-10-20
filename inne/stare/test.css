@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+}
+
+.top-left-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 50%; /* Adjust the width as needed */
+    max-height: 50%; /* Adjust the height as needed */
+}
+
+.bottom-right-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 50%; /* Adjust the width as needed */
+    max-height: 50%; /* Adjust the height as needed */
+}
+
+.floating-text {
+    position: absolute;
+    top: 50%; /* Place text in the vertical center */
+    left: 50%; /* Place text in the horizontal center */
+    transform: translate(-50%, -50%); /* Center text */
+    text-align: center;
+    padding: 10px; /* Optional padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional background color with transparency */
+}
