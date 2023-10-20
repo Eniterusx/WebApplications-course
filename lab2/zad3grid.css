@@ -1,0 +1,126 @@
+main {
+    background-color: #bfbfbf;
+    border: 2px solid black;
+    margin: auto;
+    width: 820px;
+    height: 600px;
+    padding: 10px;
+}
+
+.wrapper { 
+    border-width: 0 2px 2px 0;
+    border-color: black;
+    border-style: solid;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 50px 400px 50px;
+    grid-gap: 0;    
+    grid-template-areas: 
+    "logo header header header"
+    "glowna galeria lokalizacja kontakt"
+    "aside article article article"
+    "footer footer footer footer";
+}
+
+.logo {
+    grid-area: logo;
+}
+
+header {
+    grid-row: logo;
+    grid-column: logo / header;
+}
+
+.glowna {
+    grid-area: glowna;
+}
+
+.galeria {
+    grid-area: galeria;
+}
+
+.lokalizacja {
+    grid-area: lokalizacja;
+}
+
+.kontakt {
+    grid-area: kontakt;
+}
+
+aside {
+    grid-area: aside;
+}
+
+article {
+    grid-area: article;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.logo div, header, nav, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside, article {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.logo {
+    background-color: #979797;
+    border-right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo div {
+    background-color: #ffffff;
+    border: 1px solid black;
+    height: 30px;
+    width: 150px;
+}
+
+.logo, header, nav, aside, article, footer {
+    border-width: 2px 0 0 2px;
+    border-color: black;
+    border-style: solid;
+}
+
+header {
+    background-color: #979797;
+}
+
+nav {
+    background-color: #ffffff;
+}
+
+nav:first-of-type {
+    background-color: #c7c7c7;
+    font-weight: bold;
+}
+
+nav:hover {
+    background-color: #777777;
+    font-weight: bold;
+}
+
+aside {
+    background-color: #ffffff;
+}
+
+article {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #979797;
+}

@@ -1,0 +1,36 @@
+body {
+    background-color: bisque;
+}
+
+header {
+    text-align: center;
+}
+
+.wrapper {
+    margin: auto;
+    width: 1260px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 600px;
+    height: calc(600px*(9/16));
+    border-radius: 10px;
+}
+
+.imageholder {
+    margin-top: 15px;
+    background-color: brown;
+    height: 480px;
+    width: 600px;
+    border-radius: 15px 15px 10px 10px;
+}
+
+figcaption {
+    background-color: pink;
+    height: 40px;
+    width: 100%;
+    overflow:visible;
+}
