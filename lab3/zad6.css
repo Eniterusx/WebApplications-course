@@ -29,13 +29,16 @@ p, label {
 }
 
 .prescription {
-    width: 20px;
+    font-family: monospace;
+    font-size: 16px;
+    width: 30px;
     position: absolute;
     right: 40px;
     border: 2px solid darkblue;
     border-radius: 40%;
     background-color: white !important;
-    padding: 1px;
+    padding: 1px 3px;
+    text-align: center;
     transition: right 0.7s;
 }
 
@@ -87,13 +90,13 @@ p {
 
 @media(max-width: 1000px){
     nav{
-        width: 115px;
+        width: 120px;
     }
     .prescription{
-        right: 16px;
+        right: 8px;
     }
     .nav-button{
-        margin-right: 10px;
+        margin-right: 3px;
     }
     label p{
         opacity: 0;
