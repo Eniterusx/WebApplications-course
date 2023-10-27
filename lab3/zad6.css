@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: "Helvetica", sans-serif;
 }
 
 .nav-wrapper {
@@ -27,16 +27,6 @@ nav {
 p, label {
     background-color: lightblue;
 }
-
-/* .prescription {
-    width: 20px;
-    margin-left: 20px;
-    border: 2px solid darkblue;
-    border-radius: 40%;
-    background-color: white !important;
-    padding: 1px;
-    margin-bottom: 3px;
-} */
 
 .prescription {
     width: 20px;
