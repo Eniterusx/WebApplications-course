@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.call-wrapper {
+    width: 90%;
+    background-color: #002a42;
+    border-radius: 20px;
+    margin: 10px auto;
+    position: relative;
+    height: 90vh;
+    z-index: -1;
+}
+
+.icons-bar {
+    margin: auto;
+    margin-top: -100px;
+    position: sticky;
+    top: 20px;
+    left: 50vw;
+    display: flex;
+    flex-direction: row;    
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    z-index: 2;
+    /* space between items equal to 30px */
+    gap: 20px;
+}
+
+.icon > img {
+    /* make the icons blue */
+    width: 30px;
+    height: 30px;
+    filter: invert(43%) sepia(93%) saturate(1892%) hue-rotate(198deg) brightness(120%) contrast(85%);
+}
+
+.icon {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border: 1px solid #002a42;
+}
+
+.disconnect {
+    background-color: red;
+    padding: 7px 7px 3px 3px;
+}
+
+.disconnect > img {
+    filter: invert(100%);
+}
+
+#caller {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    /* margin: 30px 0 0 30px; */
+    max-width: 100px;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+#camera {
+    height: 100%;
+    position: absolute;
+    /* position in the middle */
+    left: 50%;
+    transform: translate(-50%);
+    object-fit: cover;
+}
+
+.dummy {
+    height: 1000px;
+}
+
+@media (max-width: 600px) {
+    .call-wrapper {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        background-color: transparent;
+    }
+
+    #camera {
+        width: 100%;
+    }
+}
