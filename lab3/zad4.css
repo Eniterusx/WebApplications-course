@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    background: linear-gradient(178deg, #057aec, #057aec 49.8%, white 50%, white);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;    
+} */
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+    background-color: #057aec;
+    width: 100%;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+}
+
+.background::after{
+    /* make a blue triangle facing right */
+    content: '';
+    position: absolute;
+    top: 360px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid transparent;
+    border-left: 99vw solid #057aec;
+    z-index: 20;
+}
+
+.page-wrapper {
+    width: 80vw;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-wrapper{
+    width: 50%;
+    padding: 10px;
+    padding-right: 50px;
+    animation-name: left-section;
+    animation-duration: 1s;
+}
+
+@keyframes left-section {
+    from {
+        transform: translateX(-60vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes right-section {
+    from {
+        transform: translateX(60vw);
+        opacity: 0;
+    }
+
+    to {    
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1, p, button {
+    color: white;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.form-wrapper {
+    margin-top: 20px;
+    width: 40%;
+    padding: 10px 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    animation-name: right-section;
+    animation-duration: 1s;
+}
+
+h2 {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 20px 10px 30px 10px;;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+}
+
+fieldset {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+input.send {
+    width: 25%;
+    background-color: #057aec;
+    color: white;
+    margin-top: 5px;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}
+
+/* media rule when width is less than 600px */
+@media (max-width: 600px) {
+    .page-wrapper {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .header-wrapper {
+        width: 100%;
+        padding: 10px;
+        padding-right: 0;
+        animation-name: up-section;
+        animation-duration: 1s;
+    }
+    
+
+    .form-wrapper {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        animation-name: down-section;
+        animation-duration: 1s;
+    }
+
+    fieldset {
+        padding: 0 20px;
+    }
+}
+
+@keyframes up-section {
+    from {
+        transform: translateY(-60vw);
+        opacity: 0;
+    }
+
+    to {    
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes down-section {
+    from {
+        transform: translateY(60vw);
+        opacity: 0;
+    }
+
+    to {    
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

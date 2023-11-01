@@ -41,6 +41,14 @@ nav {
     padding-right: 25%;
 }
 
+nav > ul > li {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
 ul {
     margin: 0;
     padding-left: 0;
@@ -53,9 +61,11 @@ ul {
 }
 
 li {
-    margin: 5px 0;
+    margin: 0;
     display: flex;
     flex-flow: row;
+    align-items: center;
+    height: 100%;
 }
 
 li a {
@@ -63,6 +73,7 @@ li a {
     text-decoration: none;
     padding: 25px;
     white-space: nowrap;
+    transition: font-size 0.1s;
 }
 
 .logo:hover {
@@ -73,7 +84,7 @@ li:hover {
     cursor: pointer;
 }
 
-ul li a.dropdown:after {
+ul li a.triangle:after {
     content: "";
     display: inline-block;
     width: 0;
@@ -86,6 +97,74 @@ ul li a.dropdown:after {
     margin-bottom: 5px;
     margin-left: 8px;
     padding-left: 1px;
+    transition: border-left, border-right, border-top 0.1s;
+}
+
+.dropdown{
+    width: 250px;
+    background: white;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    /* display: none; */
+    display: block;
+    height: 0;
+    top: 110px;
+    opacity: 0;
+    transition: opacity 0.2s, height 0s 0.2s, top 0.2s;
+}
+
+ul li:hover .dropdown, .dropdown:hover{
+    height: 300px;
+    opacity: 1;
+    top: 100px;
+    transition: height 0s 0s, top 0s;
+}
+
+ul li:hover .dropdown li, .dropdown:hover li{
+    height: 75px;
+    transition: height 0s;
+}
+
+.dropdown li a{
+    color: rgb(96, 180, 228);
+}
+
+.dropdown li {
+    display: block;
+    border-bottom: 1px solid rgb(96, 180, 228);
+    margin: 0;
+    height: 0px;
+    overflow: hidden;
+
+    transition: height 0s 0.2s;
+}
+
+.dropdown li:last-of-type {
+    border-bottom: none;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid white;
+    vertical-align: middle;
+}
+
+nav >ul>li:hover {
+    font-size: 30px;
+}
+
+nav>ul>li:hover > .triangle::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
 }
 
 .buttons {
