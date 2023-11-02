@@ -20,6 +20,7 @@
 .icons-bar {
     margin: auto;
     margin-top: -100px;
+    position: sticky;
     top: 20px;
     left: 50vw;
     display: flex;

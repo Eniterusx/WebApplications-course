@@ -12,17 +12,22 @@
     max-width: 640px;
     margin: 0 auto;
     margin-top: 40px;
+    min-width: 80vw;
 }
 
 .slider {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
 }
 
 .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
+    min-width: 80vw;
+    max-width: 100%;
+
 }
 
 nav {
@@ -40,4 +45,10 @@ a {
 
 a:hover {
     background-color: rgb(218, 218, 218);
+}
+
+@media (max-width: 640px) {
+    a {
+        font-size: 0.8em;
+    }
 }
