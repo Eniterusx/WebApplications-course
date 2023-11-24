@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #20232a;
+}
+
+.carousel-caption {
+    /* make the text white with black border */
+    color: #fff !important;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1) !important;
+}
+
+.accordion {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+  }
+
+footer {
+    width: 80%;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    border-top: 1px solid rgb(150, 150, 150);
+}
+

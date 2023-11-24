@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ol {
+    margin-top: 20px;
+}
+
+li {
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+    border-bottom: 2px solid gray;
+}

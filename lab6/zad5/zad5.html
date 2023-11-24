@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Zadanie 5</title>
+    <link rel="stylesheet" href="zad5.css">
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        @media (max-width: 992px) {
+        .main-title {
+            font-size: 100% !important;
+            }
+        }
+
+        @media (max-width: 800px) {
+        .carousel {
+            display: none;
+            }
+        }
+
+        @media (min-width: 801px) {
+        .navbar-expand-md .navbar-nav {
+            display: none !important; /* Ukryj nawigację na mniejszych ekranach */
+        }
+
+        .navbar-expand-md .navbar-toggler {
+            display: block !important; /* Pokaż hamburger menu na mniejszych ekranach */
+        }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- <nav class="p-3 navbar-expand-lg bg-dark text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-start justify-content-lg-start">
+            <h4 class="main-title text-start col-lg-5 fs-5">
+                PAW Kurs Programowania Webowego
+            </h4>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+            <div class="collapse navbar-collapse col-lg-7" id="navbarNav">
+            <ul class="navbar-nav ms-auto justify-content-lg-end ">
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Curriculum</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Our Instructors</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">FAQ</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 text-secondary">Contact Us</a></li>
+            </ul>
+            </div>
+
+
+          </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand text-start col-lg-5 fs-5 text-white" href="#">Moja Strona</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col-lg-7" id="navbarNav">
+            <ul class="navbar-nav ms-auto justify-content-lg-end">
+              <li class="nav-item">
+                <a class="nav-link px-2 text-white" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  px-2 text-secondary" href="#">Curriculum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  px-2 text-secondary" href="#">Our Instructors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  px-2 text-secondary" href="#">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  px-2 text-secondary" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images/carousel1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Książki i jabłko</h5>
+              <p>Witamy w przedszkolu.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/carousel2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Dobrze wyposażona biblioteka</h5>
+              <p>Dużo książek.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carousel3.jpg"" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Wspólne granie w gry</h5>
+              <p>Granie na serwerach LAN mile widziane.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carousel4.jpg"" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Nie dotykaj laptopa</h5>
+              <p>Pobrudzisz ekran niepotrzebnie.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/carousel5.jpg"" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Jakaś lampa jeszcze</h5>
+              <p>Nie wiem nawet po co.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+        
+    <!-- make a centered h2 with margin-top equal to 20px -->
+    <h2 class="text-center mt-3">Frequently Asked Questions</h2>
+
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Najlepszy język?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Python
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Czy lubisz css?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Kocham!
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Sekcja 3
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Treść sekcji 3
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Sekcja 4
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Treść sekcji 4
+              </div>
+            </div>
+          </div>
+      </div>
+      <footer>
+        Copyright &copy; 2023 PAW - Kurs Programowania Webowego
+      </footer>
+</body>
+</html>

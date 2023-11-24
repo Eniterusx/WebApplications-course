@@ -12,7 +12,7 @@
     max-width: 640px;
     margin: 0 auto;
     margin-top: 40px;
-    min-width: 80vw;
+    min-width: calc(min(80vw, 600px));
 }
 
 .slider {
@@ -25,7 +25,6 @@
 .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
-    min-width: 80vw;
     max-width: 100%;
 
 }
@@ -49,6 +48,6 @@ a:hover {
 
 @media (max-width: 640px) {
     a {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
