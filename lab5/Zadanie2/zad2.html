@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            margin: auto;
+            width: 30%;
+            height: auto;
+        }
+
+        button {
+            margin: auto;
+            margin-top: 20px;
+            width: 30%;
+        }
+
+        img.red {
+            border: 5px solid red;
+        }
+
+        img.green {
+            border: 5px solid green;
+        }
+
+        img.blue {
+            border: 5px solid blue;
+        }
+
+        img.yellow {
+            border: 5px solid yellow;
+        }
+    </style>
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('image');
+            var images = ['../img/berlin_medium.jpeg', '../img/sydney_medium.jpeg', '../img/cracow_medium.jpeg', '../img/warsaw_medium.jpeg'];
+            var classes = ['red', 'green', 'blue', 'yellow'];
+            var currentImage = image.getAttribute('src');
+            var index = images.indexOf(currentImage);
+            index = (index + 1) % images.length;
+            image.src = images[index];
+            image.className = classes[index];
+        }
+    </script>
+</head>
+<body>
+    <img id="image" src="../img/berlin_medium.jpeg" width="100" height="180">
+    <button onclick="changeImage()">Change image</button>
+</body>
+</html>

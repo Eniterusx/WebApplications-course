@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function enableCounter() {
+            counterEnabled = true;
+            counter = 0;
+            txt = "Counter enabled!";
+            document.getElementById("counter").innerHTML = txt;
+        }
+
+        function disableCounter() {
+            counterEnabled = false;
+            txt = "Counter disabled!";
+            document.getElementById("counter").innerHTML = txt;
+        }
+
+        function increment() {
+            // if counter not defined then counter = 0
+            if (counterEnabled) {
+                counter++;
+                txt = "Counter: " + counter;
+                document.getElementById("counter").innerHTML = txt;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="increment()">Count</button>
+    <button onclick="enableCounter()">Enable counter</button>
+    <button onclick="disableCounter()">Disable counter</button>
+    <p id="counter">Waiting for action</p>
+</body>
+</html>

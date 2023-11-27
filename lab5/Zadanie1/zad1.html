@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myFunction() {
+            var txt;
+            var person = prompt("Please enter your name:");
+            if (person != null && person != "") {
+                if (person[person.length - 1] == 'a') {
+                    txt = "Witam Panią " + person + "!";
+                }
+                else {
+                    txt = "Witam Pana " + person + "!";
+                }
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFunction()">Click me</button>
+    <p id="demo">Oczekuję na imię.</p>
+</body>
+</html>
