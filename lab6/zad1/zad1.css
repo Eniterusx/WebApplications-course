@@ -1,0 +1,31 @@
+* {
+    user-select: none;
+
+}
+#blue {
+    margin: auto;
+    margin-top: 25px;
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+}
+#red {
+    margin: auto;
+    margin-top: 10px;
+    background-color: red;
+    width: 105px;
+    height: 105px;
+}
+#yellow {
+    margin: auto;
+    margin-top: 5px;
+    background-color: yellow;
+    width: 75px;
+    height: 75px;
+}
+div {
+    text-align: center;
+}
+div:hover {
+    cursor: default;
+}

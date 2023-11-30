@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="zad7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>Document</title>
+    <script src="zad7.js" defer></script>
+</head>
+<body>
+
+    <h1>CAT GALLERY</h1>
+
+
+    <div class="gallery">
+        <img src="images/image1.png" alt="Zdjęcie 1" onclick="openModal('images/image1.png')">
+        <img src="images/image2.png" alt="Zdjęcie 2" onclick="openModal('images/image2.png')">
+        <img src="images/image3.png" alt="Zdjęcie 3" onclick="openModal('images/image3.png')">
+        <img src="images/image4.png" alt="Zdjęcie 4" onclick="openModal('images/image4.png')">
+        <img src="images/image5.png" alt="Zdjęcie 5" onclick="openModal('images/image5.png')">
+        <img src="images/image6.png" alt="Zdjęcie 6" onclick="openModal('images/image6.png')">
+        <img src="images/image7.png" alt="Zdjęcie 7" onclick="openModal('images/image7.png')">
+        <img src="images/image8.png" alt="Zdjęcie 8" onclick="openModal('images/image8.png')">
+    </div>
+
+    <!-- modal window -->
+    <div id="myModal" class="modal">
+        <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+        <i class="fas fa-times close" onclick="closeModal()"></i>
+        <img class="display" id="modalImg" style="width: 100%;">
+        <div class="button-wrapper">
+            <i class="fa-solid fa-arrow-left" onclick="changePhoto(-1)"></i>
+            <i class="fa-solid fa-arrow-right" onclick="changePhoto(1)"></i>
+            <!-- <button onclick="changePhoto(-1)">&lt;</button> -->
+            <!-- <button onclick="changePhoto(1)">&gt;</button> -->
+        </div>
+        </div>
+
+    <!-- gray overlay -->
+    <div id="overlay" class="overlay" onclick="closeModal()"></div>
+
+
+</body>
+</html>

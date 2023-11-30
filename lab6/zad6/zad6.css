@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    background: #fff;
+    width: 450px;
+    padding: 28px;
+    border-radius: 5px;
+}
+
+.wrapper .pass-f {
+    height: 65px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pass-f input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    outline: none;
+    font-size: 1.3rem;
+    border: 2px solid #999;
+    border-radius: 5px;
+}
+
+.pass-f i {
+    right: -15px;
+    top: 50%;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.wrapper .content {
+    margin: 20px 0 10px;
+}
+
+.content .password-rules {
+    margin-top: 20px;
+}
+
+.password-rules li {
+    font-size: 1.3rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.password-rules li i {
+    width: 20px;
+    color: #aaa;
+    font-size: 0.7rem;
+    padding-top: 3px;
+}
+
+.password-rules li i.fa-times {
+    color: red;
+}
+
+.password-rules li i.fa-check {
+    color: green;
+    margin-left: -2px;
+    width: 20px;
+}
+
+.success {
+    border-color: green !important;
+}
+
+.error {
+    border-color: red !important;
+}
+
+.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+.shake-icon{
+    animation: shake-icon 0.3s ease-in-out;
+
+}
+
+/* add keyframe */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+
+    75% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake-icon {
+    0% {
+        transform: translate(0, -50%);
+    }
+
+    25% {
+        transform: translate(10px, -50%);
+    }
+
+    50% {
+        transform: translate(-10px, -50%);
+    }
+
+    75% {
+        transform: translate(10px, -50%)
+    }
+
+    100% {
+        transform: translate(0, -50%)
+    }
+}
+
+/* media under 650px */
+@media (max-width: 650px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    input {
+        font-size: 1rem;
+        width: 95% !important;
+    }
+
+    .pass-f i {
+        right: 5px;
+    }
+}
