@@ -13,8 +13,53 @@
     flex-wrap: wrap !important;
 }
 
+#myTableBody input {
+    margin: 0 0 5px 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+}
+
+#myTableBody tr:first-child th {
+    text-align: center;
+}
 #pagination li {
     width: 45px;
     margin: 1px;
     text-align: center;
+}
+
+.fixed-layout {
+    table-layout: fixed !important;
+    width: 100%;
+}
+
+.remove-side-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+td.remove-side-padding {
+    padding-bottom: 0 !important;
+}
+
+.no-left-border {
+    border-left: none !important;
+}
+
+.header-bg {
+    background-color: rgb(224, 224, 224);
+    overflow: hidden;
+}
+
+.accordion-header {
+    height: 45px;
+    display: flex;
+    background-color: rgb(184, 184, 184);
+    padding-bottom: 2px;
+    padding-top: 10px;
+    margin-top: -15px;
+    margin-bottom: -15px;
 }

@@ -1,5 +1,5 @@
 let extractedData;
-const itemsPerPage = 10; // How many items per page - 10 looks optimal
+const itemsPerPage = 30; // How many items per page
 document.addEventListener('DOMContentLoaded', () => {
     fetch('files/all.json')
         .then(response => response.json())
@@ -59,25 +59,87 @@ function createTableHeader(data) {
 
 // Fills the table with data
 function populateTable(data) {
+    // Calculate start and end for slicing
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const slicedData = data.slice(startIndex, endIndex);
-    // tableBody.innerHTML = '';
-    for (let i = tableBody.rows.length - 1; i > 0; i--) {
-        tableBody.deleteRow(i);
-    }
-    const keys = Object.keys(data[0]);
+    const pageData = data.slice(startIndex, endIndex);
 
-    // Create table body
-    slicedData.forEach(item => {
+    // Group data by subregion
+    const groupedData = pageData.reduce((groups, item) => {
+        const group = (groups[item.Subregion] || []);
+        group.push(item);
+        groups[item.Subregion] = group;
+        return groups;
+    }, {});
+
+    // Clear the tableBody
+    while (tableBody.rows.length > 1) {
+        tableBody.deleteRow(1);
+    }
+
+    // For each subregion
+    for (const subregion in groupedData) {
+        // Create a new row and a cell for the accordion
         const row = document.createElement('tr');
-        keys.forEach(key => {
-            const td = document.createElement('td');
-            td.textContent = item[key];
-            row.appendChild(td);
+        const cell = document.createElement('td');
+        cell.colSpan = 5; // Make the cell as wide as 4 columns
+        cell.className = 'remove-side-padding  header-bg pd-0';
+
+        
+
+        // Create a new accordion item
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'accordion-item';
+
+        // Create a div for the accordion header
+        const accordionHeader = document.createElement('div');
+        accordionHeader.className = 'accordion-header pl-3 ';
+        accordionHeader.style.width = '100%';
+        accordionHeader.textContent = subregion;
+
+        // Create a table for the countries in this subregion
+        const table = document.createElement('table');
+        table.className = 'table table-bordered border fixed-layout no-left-border';
+        table.style.display = 'none'; // Hide the table initially
+        groupedData[subregion].forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.className = 'accordion-row';
+            Object.keys(item).forEach((key, index) => {
+                const td = document.createElement('td');
+                td.className = 'no-left-border';
+                td.textContent = item[key];
+                if (index === 0) {
+                    row.className = 'no-left-border';
+                }
+
+                row.appendChild(td);
+            });
+            if (index % 2 === 0) {
+                row.className += ' bg-white';
+            }
+            else {
+                row.className += ' bg-light';
+            }
+            table.appendChild(row);
         });
+
+        // Add an onclick event listener to the accordion header
+        accordionHeader.onclick = () => {
+            // Toggle the visibility of the table
+            table.style.display = table.style.display === 'none' ? '' : 'none';
+        };
+
+        // Append the accordion header and the table to the accordion item
+        accordionItem.appendChild(accordionHeader);
+        accordionItem.appendChild(table);
+
+        // Append the accordion item to the cell and the cell to the row
+        cell.appendChild(accordionItem);
+        row.appendChild(cell);
+
+        // Append the row to the tableBody
         tableBody.appendChild(row);
-    });
+    }
 }
 
 // Generate the pagination
