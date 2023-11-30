@@ -31,6 +31,9 @@ function createTableHeader(data) {
     const headerRow = document.createElement('tr');
     const keys = Object.keys(data[0]);
     keys.forEach((key, index) => {
+        if (index==4) {
+            return;
+        }
         const th = document.createElement('th');
 
         const input = document.createElement('input');
@@ -82,7 +85,7 @@ function populateTable(data) {
         // Create a new row and a cell for the accordion
         const row = document.createElement('tr');
         const cell = document.createElement('td');
-        cell.colSpan = 5; // Make the cell as wide as 4 columns
+        cell.colSpan = 4; // Make the cell as wide as 4 columns
         cell.className = 'remove-side-padding  header-bg pd-0';
 
         
@@ -105,6 +108,9 @@ function populateTable(data) {
             const row = document.createElement('tr');
             row.className = 'accordion-row';
             Object.keys(item).forEach((key, index) => {
+                if (index == 4) {
+                    return;
+                }
                 const td = document.createElement('td');
                 td.className = 'no-left-border';
                 td.textContent = item[key];
