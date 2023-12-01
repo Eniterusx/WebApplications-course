@@ -100,6 +100,29 @@ function populateTable(data) {
         accordionHeader.style.width = '100%';
         accordionHeader.textContent = subregion;
 
+        // Initialize totalPopulation and totalArea
+        let totalPopulation = 0;
+        let totalArea = 0;
+
+        // Calculate totalPopulation and totalArea
+        groupedData[subregion].forEach((item) => {
+            // convert item.Population to int
+            totalPopulation += parseInt(item.Population);
+            totalArea += parseInt(item.Area);
+        });
+
+        // Create new elements for totalPopulation and totalArea
+        const populationElement = document.createElement('div');
+        const areaElement = document.createElement('div');
+
+        // Set the text content of these elements
+        // populationElement.textContent = `${totalPopulation}   `;
+        // areaElement.textContent = `${totalArea}   `;
+
+        // Append these elements to accordionHeader
+        accordionHeader.appendChild(populationElement);
+        accordionHeader.appendChild(areaElement);
+
         // Create a table for the countries in this subregion
         const table = document.createElement('table');
         table.className = 'table table-bordered border fixed-layout no-left-border';
