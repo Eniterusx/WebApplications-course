@@ -88,8 +88,6 @@ function populateTable(data) {
         cell.colSpan = 4; // Make the cell as wide as 4 columns
         cell.className = 'remove-side-padding  header-bg pd-0';
 
-        
-
         // Create a new accordion item
         const accordionItem = document.createElement('div');
         accordionItem.className = 'accordion-item';
@@ -98,7 +96,6 @@ function populateTable(data) {
         const accordionHeader = document.createElement('div');
         accordionHeader.className = 'accordion-header pl-3 ';
         accordionHeader.style.width = '100%';
-        accordionHeader.textContent = subregion;
 
         // Initialize totalPopulation and totalArea
         let totalPopulation = 0;
@@ -111,15 +108,24 @@ function populateTable(data) {
             totalArea += parseInt(item.Area);
         });
 
-        // Create new elements for totalPopulation and totalArea
+        // Create new elements for subregion, totalPopulation and totalArea
+        const subregionElement = document.createElement('div');
         const populationElement = document.createElement('div');
         const areaElement = document.createElement('div');
 
         // Set the text content of these elements
-        // populationElement.textContent = `${totalPopulation}   `;
-        // areaElement.textContent = `${totalArea}   `;
+        subregionElement.textContent = `${subregion}`;
+        subregionElement.style.float = 'left';
+        subregionElement.style.flexBasis = '50%';
+        populationElement.textContent = `${totalPopulation}`;
+        populationElement.style.float = 'right';
+        populationElement.style.flexBasis = '25%';
+        areaElement.textContent = `${totalArea}   `;
+        areaElement.style.float = 'right';
+        areaElement.style.flexBasis = '25%';
 
         // Append these elements to accordionHeader
+        accordionHeader.appendChild(subregionElement);
         accordionHeader.appendChild(populationElement);
         accordionHeader.appendChild(areaElement);
 
