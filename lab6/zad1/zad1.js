@@ -5,9 +5,15 @@ var yellowEnabled = true;
 var redEnabled = true;
 var propagationEnabled = false;
 
-function handleCounter(value) {
+function handleCounter(value, element) {
     if (!propagationEnabled) {
         event.stopPropagation();
+    }
+    if (swap){
+        // get parent of the element
+        let parentElement = element.parentNode;
+        event.stopPropagation();
+        parentElement.click();
     }
     if (counter == undefined) {
         counter = 0;
@@ -16,36 +22,23 @@ function handleCounter(value) {
         return;
     }
     var add = 0;
-    if (!swap) {
-        switch(value){
-            case "niebieski":
-                add = 1;
-                break;
-            case "czerwony":
-                add = 2;
-                break;
-            case "zolty":
-                add = 5;
-                break;
+    switch(value){
+        case "niebieski":
+            add = 1;
+            break;
+        case "czerwony":
+            add = 2;
+            break;
+        case "zolty":
+            add = 5;
+            break;
         }
-    }
-    else {
-        switch(value){
-            case "niebieski":
-                add = 5;
-                break;
-            case "czerwony":
-                add = 2;
-                break;
-            case "zolty":
-                add = 1;
-                break;
-        }
-    }
+    
+
 
     counter += add;
-    console.log(counter);
     document.getElementById("counter").innerHTML = counter;
+    console.log("nacisnales " + value + " o wartosci " + add);
     document.getElementById("order").innerHTML = "nacisnales " + value + " o wartosci " + add;
     
     // if counter is 30 then disable yellow div button
@@ -73,15 +66,6 @@ function resetCounter() {
 
 function changeOrder() {
     swap = !swap;
-
-    
-    var div = document.getElementById("blue");
-    var anchor = div.children[0];
-
-    div.removeChild(anchor);
-    div.innerText = swap ? "5" : "1";
-    div.appendChild(anchor);
-
-    div = document.getElementById("yellow");
-    div.innerText = swap ? "1" : "5";
+    var txt = swap ? "bottom -> top" : "top -> bottom";
+    document.getElementById("order").innerHTML = `zmieniles kolejnosc (${txt})`;
 }
