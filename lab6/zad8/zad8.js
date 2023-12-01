@@ -250,7 +250,11 @@ function filterTable(columnIndex, value) {
 function applyFilters() {
     const filteredData = extractedData.filter(item => {
         return currentFilters.every((filter, index) => {
-            return filter === '' || item[Object.keys(item)[index]].toLowerCase().includes(filter);
+            if (/^\d+$/.test(filter))  {
+                return Number(item[Object.keys(item)[index]]) >= Number(filter);
+            } else {
+                return filter === '' || item[Object.keys(item)[index]].toLowerCase().includes(filter);
+            }
         });
     });
 
