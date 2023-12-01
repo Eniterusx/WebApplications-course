@@ -58,6 +58,9 @@ function enablePropagation() {
 
 function resetCounter() {
     counter = 0;
+    swap = false;
+    propagationEnabled = false;
+    document.getElementById("propagation").innerHTML = "Start propagation";
     yellowEnabled = true;
     redEnabled = true;
     document.getElementById("counter").innerHTML = counter;
