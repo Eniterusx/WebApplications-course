@@ -1,0 +1,39 @@
+<div class="formWrapper">
+<form #form="ngForm" (ngSubmit)="addPost(form.value)">
+
+  <label>
+    User Id:
+    <input type="text" name="userId" id="userId" ngModel>
+  </label>
+  <label>
+    Title:
+    <input type="text" name="title" id="title" ngModel>
+  </label>
+  <label>
+    Body:
+    <input type="text" name="body" id="body" ngModel>
+  </label>
+  <input type="submit" value="submit">
+</form>
+</div>
+
+<div class="postsWrapper">
+@for (val of posts; track val.id) {
+  <ul>
+    <div class="idWrapper">
+      <li class="id">
+        Id - {{val.id}}
+      </li>
+      <li class="userId">
+        User Id - {{val.userId}}
+      </li>
+   </div>
+    <li class="title">
+      {{val.title}}
+    </li>
+    <li class="body">
+      {{val.body}}
+    </li>
+  </ul>
+}
+</div>

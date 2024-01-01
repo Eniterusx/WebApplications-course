@@ -1,0 +1,59 @@
+.photosWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul {
+    margin: 5px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 20%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    border: 2px solid black;
+}
+
+.id {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.title {
+    width: 85%;
+    height: 80px;
+    overflow: hidden;
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.thumbnail {
+}
+
+.details {
+    margin-top: 22px;
+    width: 30%;
+    height: 45px;
+    font-size: 1.1em;
+    background-color: brown;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+

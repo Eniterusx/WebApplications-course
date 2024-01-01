@@ -1,0 +1,47 @@
+.formWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    margin: 20px auto;
+}
+
+.postsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.postsWrapper ul {
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid black;
+    list-style: none;   
+}
+
+.postsWrapper li {
+    height: auto;
+    padding: 10px;
+    margin: 2px;
+}
+
+.idWrapper {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+}
+
+.userId{
+    margin-left: 50px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.body {
+    font-size: 1em;
+}

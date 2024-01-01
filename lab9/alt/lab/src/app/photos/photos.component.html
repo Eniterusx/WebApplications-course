@@ -1,0 +1,21 @@
+<div class="photosWrapper">
+@for (val of photos; track val.id) {
+  <ul>
+    <li class="id">
+      {{val.id}}
+    </li>
+    <!-- <li class="albumId">
+      {{val.albumId}}
+    </li> -->
+    <li class="title">
+      {{val.title}}
+    </li>
+    <li class="thumbnail">
+      <img src="{{val.thumbnailUrl}}" alt="{{val.title}}">
+    </li>
+    <li class="details">
+      <a href = "http://localhost:4200/photos/{{val.id}}">Details</a>
+    </li>
+  </ul>
+}
+</div>

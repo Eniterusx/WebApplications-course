@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav li {
+    padding: 20px 50px;
+}
+
+nav a {
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+}
